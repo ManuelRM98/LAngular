@@ -1,0 +1,8 @@
+.contenedor_principal{
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15% 75% 10%;
+}
+.encabezado, .cuerpo, .final{
+    border: 1px solid black;
+}
