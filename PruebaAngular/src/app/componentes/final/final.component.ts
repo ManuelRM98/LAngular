@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-final',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FinalComponent implements OnInit {
 
   @Input() mensajeRecibidoHijo:string;
+  @Output() emisionmensaje = new EventEmitter<string>();
   
   public autor:string='Eliana Aguilar Ceballos';
   public year:number=2020;
@@ -15,6 +16,9 @@ export class FinalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.emisionmensaje.emit('Primer proyecto en Angular')
+
+
   }
 
 }
